@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta charset="UTF-8">
+<title>ページのタイトル</title>
+<style type="text/css">
+#id_canvas1 {
+ position:absolute;
+ top: 0px;
+ left: 0px;
+ z-index: 1;
+}
+</style>
+<script type="text/javascript">
+///////////////////////
+// ゲームのプログラム
+///////////////////////
+
+onload = function() {
+    canvas1 = document.getElementById('id_canvas1');
+    if (!canvas1 || !canvas1.getContext) {
+    alert("本ページの閲覧はHTML5対応ブラウザで行ってください");
+    return false;
+    }
+    ctx1 = canvas1.getContext('2d');
+
+    ctx1.fillStyle = "rgb(0,0,0)";
+    ctx1.fillRect(0,0,320,240);
+    ctx1.beginPath();
+    ctx1.strokeStyle = "rgb(255,255,255)";
+    ctx1.lineWidth = 4;
+    ctx1.rect(100,100,50,50);
+    ctx1.stroke();
+
+    aa = 2;
+    cc = 3;
+    console.log(aa);
+}
+
+</script>
+</head>
+<body>
+    <canvas id="id_canvas1" width="320" height="240"></canvas>
+    <canvas id="id_canvas2" width="320" height="240"></canvas>
+</body>
+</html>
